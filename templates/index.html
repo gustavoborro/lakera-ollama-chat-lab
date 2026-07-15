@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat Lab — Ollama + Lakera Guard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="title">
+      <h1>Chat Lab</h1>
+      <span class="model-badge" id="model-badge">modelo: {{ model }}</span>
+    </div>
+    <div class="lakera-toggle">
+      <span>Lakera Guard</span>
+      <label class="switch">
+        <input type="checkbox" id="lakera-switch" />
+        <span class="slider"></span>
+      </label>
+      <span id="lakera-state" class="lakera-state">carregando...</span>
+    </div>
+  </header>
+
+  <main class="chat-container">
+    <div id="messages" class="messages"></div>
+    <form id="chat-form" class="chat-form">
+      <input
+        id="message-input"
+        type="text"
+        autocomplete="off"
+        placeholder="Digite sua mensagem..."
+        maxlength="4000"
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="footer-note">
+    Laboratorio de demonstracao — nao usar em producao.
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
