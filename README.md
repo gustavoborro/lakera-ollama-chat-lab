@@ -31,11 +31,21 @@ Navegador  --->  Flask (app.py)  --->  Ollama (LLM local, ex: qwen2.5:0.5b)
 
 ## Pré-requisitos
 
-- Servidor Linux (testado em Ubuntu/Debian) com pelo menos 2 GB de RAM livres.
+- Servidor Linux atualizado (testado em Ubuntu/Debian) com pelo menos 2 GB de RAM livres.
+```bash
+apt update -y
+apt upgrade -y
+```
 - Python 3.10+
+```bash
+apt install python3-pip
+apt install python3.12-venv -y
+```
 - Git
 - Uma chave de API do Lakera Guard: crie uma conta em
   https://platform.lakera.ai e gere uma API key no painel do projeto.
+
+
 
 ## Passo a passo
 
