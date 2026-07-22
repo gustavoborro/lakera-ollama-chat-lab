@@ -36,7 +36,7 @@ Navegador  --->  Flask (app.py)  --->  Ollama (LLM local, ex: qwen2.5:0.5b)
 apt update -y
 apt upgrade -y
 ```
-- Python 3.10+
+- Python 3.12+
 ```bash
 apt install python3-pip
 apt install python3.12-venv -y
