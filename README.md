@@ -33,12 +33,13 @@ Navegador  --->  Flask (app.py)  --->  Ollama (LLM local, ex: qwen2.5:0.5b)
 
 - Servidor Linux atualizado (testado em Ubuntu/Debian) com pelo menos 2 GB de RAM livres.
 ```bash
+sudo su
 apt update -y
 apt upgrade -y
 ```
 - Python 3.12+
 ```bash
-apt install python3-pip
+apt install python3-pip -y
 apt install python3.12-venv -y
 ```
 - Git
