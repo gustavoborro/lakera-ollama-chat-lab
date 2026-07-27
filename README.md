@@ -73,8 +73,8 @@ qualidade um pouco melhor, também funcionam bem: `llama3.2:1b` ou `gemma2:2b`
 ### 2. Clonar o repositório
 
 ```bash
-git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
-cd <seu-repositorio>
+git clone https://github.com/gustavoborro/lakera-ollama-chat-lab.git
+cd lakera-ollama-chat-lab
 ```
 
 ### 3. Criar o ambiente Python e instalar dependências
