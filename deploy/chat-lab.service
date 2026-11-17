@@ -1,5 +1,5 @@
 [Unit]
-Description=Chat Lab (Ollama + Lakera Guard) - laboratorio de demonstracao
+Description=Chat Lab (Ollama + Check Point AI Guardrails) - laboratorio de demonstracao
 After=network.target ollama.service
 
 [Service]
@@ -7,7 +7,7 @@ Type=simple
 User=chatlab
 WorkingDirectory=/opt/lakera-ollama-chat-lab
 EnvironmentFile=/opt/lakera-ollama-chat-lab/.env
-ExecStart=/opt/lakera-ollama-chat-lab/.venv/bin/gunicorn -w 1 -b 0.0.0.0:5000 app:app
+ExecStart=/opt/lakera-ollama-chat-lab/.venv/bin/gunicorn -w 1 --threads 8 --timeout 180 -b 0.0.0.0:5000 app:app
 Restart=on-failure
 RestartSec=5
 

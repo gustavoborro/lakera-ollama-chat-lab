@@ -196,3 +196,19 @@ input:checked + .slider::before {
   color: #6b7280;
   padding: 6px;
 }
+
+.msg.detected {
+  align-self: flex-start;
+  background: #3a2f13;
+  color: #fcd34d;
+  border: 1px solid #78591d;
+  font-size: 13px;
+}
+
+.msg .trace {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: 0.75;
+  font-family: ui-monospace, Consolas, monospace;
+}

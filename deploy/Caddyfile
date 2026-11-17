@@ -1,0 +1,19 @@
+# Reverse proxy HTTPS (TLS automatico via Let's Encrypt) para o Check Point AI Red Teaming.
+# Publica SOMENTE o endpoint /api/redteam/* — a interface web e o /api/toggle
+# continuam acessiveis apenas pela rede interna (porta 5000).
+#
+# Troque o hostname pelo seu (ex: 203-0-113-10.sslip.io para laboratorio sem DNS proprio).
+redteam.example.com {
+	tls {
+		protocols tls1.2 tls1.3
+	}
+
+	@redteam path /api/redteam/*
+	handle @redteam {
+		reverse_proxy 127.0.0.1:5000
+	}
+
+	handle {
+		respond "Not found" 404
+	}
+}
